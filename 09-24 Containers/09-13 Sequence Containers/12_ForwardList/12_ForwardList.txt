@@ -61,3 +61,10 @@ difference between this function and other begin() functions, is that it returns
 Format:
 
 flName.begin();
+
+
+4. std::forward_list::cbefore_begin();
+
+This function is the const-guarranteed version of before_begin(). Format:
+
+flName.cbefore_begin();

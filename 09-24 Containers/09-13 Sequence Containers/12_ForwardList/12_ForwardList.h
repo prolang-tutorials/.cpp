@@ -118,3 +118,26 @@ void flBegin()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flCbefore_begin()
+{
+    std::cout << "std::forward_list::cbefore_begin()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne contains:";
+    for (std::forward_list<int>::iterator x = flOne.begin(); x != flOne.end(); ++x)
+    {
+        std::cout << " " << *x;
+    }
+    std::cout << std::endl;
+
+    flOne.insert_after(flOne.cbefore_begin(), 10);
+
+    std::cout << "flOne now contains:";
+    for (std::forward_list<int>::iterator x = flOne.begin(); x != flOne.end(); ++x)
+    {
+        std::cout << " " << *x;
+    }
+    std::cout << '\n' << std::endl;
+}
