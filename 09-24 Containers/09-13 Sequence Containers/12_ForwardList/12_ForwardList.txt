@@ -1,0 +1,57 @@
+Forward lists are sequence containers that allow constant-time insert and erase operations anywhere within the sequence.
+
+Forward lists are used as singly-linked lists, lists that can hold values scattered across your memory, but still work 
+fast and well. The ordering is kept by the association to each element of a link to the next element in the sequence.
+
+The main design difference between a forward_list container and a list container is that the first keeps internally only a link 
+to the next element, while the latter keeps two links per element, one for the next, and one for the previous element. This
+allows forward_lists to take up slightly less memory than other sequence container objects, and also speeds up accessing its
+elements. The downside to this is that forward_lists only iterate, and can only be iterated forwards, making them slightly more
+difficult to traverse in search of elements. Forward_lists also excel at the insertion, extraction, and moving of elements
+between points of the object, which can be helpful in many ways. Easily the biggest problem with this object is accessing
+non-outlier elements. To access an element somewhere in the middle of the object, one has to start at the beginning, and then
+iterate through the object to access said element. This consumes a lot of time (in comparison to Arrays, Deques, and Vectors),
+as well as taking more memory to store the links between elements.
+
+Forward_list was made to be efficient. This can be seen in one very clear example. Forward_list is the only standard container
+class that deliberately lacks a size member function for efficiency. Having a size member that takes constant time would require
+it to keep an internal counter for its size (list does this, not forward_list). This would consume some extra storage and make
+insertion and removal operations slightly less efficient. There is a way around this, and that is finding the distance by 
+iterating through the entire object and for each iteration, adding 1 to some counter variable.
+
+In the forward_list header file, there are a lot of new member functions that you may have not seen in the other Sequence Container
+tutorials I've done, so there will be more in depth explanations for each. There 5 ways of constructing a forward_list.
+
+1. std::forward_list<varType> flName;
+2. std::forward_list<varType> flName (elementAmount, valueToFillThoseElements);
+3. std::forward_list<varType> flName (iterationStart, iterationEnd);
+4. std::forward_list<varType> flName (forward_listToCopy);
+5. std::forward_list<varType> flName (std::move(flToMoveFrom));
+6. std::forward_list<varType> flName = { values }; (This can only be used as of C++11 and onward. To compile in C++11 architechture,
+in your compile command (g++, gcc, etc), make sure to put -std=c++11 or -std=c++17 to make it run well.)
+
+These are very similar to the rest of the Sequence Container header file constructors, but with 1 main difference, #5. In #5, we
+see a new std function. This is std::move. It can be found in the <utility> header file, and is used to move the values of an
+object to a different object.
+
+Overall, in this header file, there are 28 member functions.
+
+1. std::forward_list::assign();
+
+Assign, again, is the function used to assign some values to the forward_list, and can be used in 3 different ways. Formats:
+
+flName.assign(elementsToFill, valueToFillThoseElements);
+flName.assign(iterationStart, iterationEnd);
+flName.assign( values );
+
+
+2. std::forward_list::before_begin();
+
+This function returns an iterator to the theoretical position before the first element in the forward_list. This can be a const
+iterator if the forward_list itself is const. As a recommendation, this function should only be used in tandem with empace_after,
+erase_after, splice_after, and insert_after, and the return variable should not be dereferenced at any point in time. Format:
+
+flName.before_begin();
+
+
+3. 
