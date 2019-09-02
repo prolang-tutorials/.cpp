@@ -169,3 +169,24 @@ void flCend()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flClear()
+{
+    std::cout << "std::forward_list::clear()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    for (auto x = flOne.begin(); x != flOne.end(); ++x)
+    {
+        std::cout << " " << *x;
+    }
+    std::cout << std::endl;
+
+    flOne.clear();
+
+    for (auto x = flOne.begin(); x != flOne.end(); ++x)
+    {
+        std::cout << " " << *x;
+    }
+    std::cout << '\n' << std::endl;
+}

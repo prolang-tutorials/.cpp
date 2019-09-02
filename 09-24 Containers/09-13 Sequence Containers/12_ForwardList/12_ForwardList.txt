@@ -82,3 +82,11 @@ flName.cbegin();
 This is the const-guarranteed version of end(). Format:
 
 flName.cend();
+
+
+7. std::forward_list::clear();
+
+This function clears out the elements from the object, and destroys them, opening up memory space, and making the object's size 0.
+Format:
+
+flName.clear();
