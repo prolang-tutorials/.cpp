@@ -54,4 +54,10 @@ erase_after, splice_after, and insert_after, and the return variable should not 
 flName.before_begin();
 
 
-3. 
+3. std::forward_list::begin();
+
+This function, like it does with other header files, returns an iterator that points to the first element in the object. The one
+difference between this function and other begin() functions, is that it returns a forward_iterator. This can be a const iterator.
+Format:
+
+flName.begin();

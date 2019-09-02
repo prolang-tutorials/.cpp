@@ -104,3 +104,17 @@ void flBefore_Begin()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flBegin()
+{
+    std::cout << "std::forward_list::begin()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne contains:";
+    for (std::forward_list<int>::iterator flIt = flOne.begin(); flIt != flOne.end(); ++flIt)
+    {
+        std::cout << " " << *flIt;
+    }
+    std::cout << '\n' << std::endl;
+}
