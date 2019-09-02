@@ -68,3 +68,10 @@ flName.begin();
 This function is the const-guarranteed version of before_begin(). Format:
 
 flName.cbefore_begin();
+
+
+5. std::forward_list::cbegin();
+
+This is the const-guarranteed version of begin(). Format:
+
+flName.cbegin();
