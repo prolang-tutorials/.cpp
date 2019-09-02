@@ -155,3 +155,17 @@ void flCbegin()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flCend()
+{
+    std::cout << "std::forward_list::cend()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne contains:";
+    for (auto x = flOne.cbegin(); x != flOne.cend(); ++x)
+    {
+        std::cout << " " << *x;
+    }
+    std::cout << '\n' << std::endl;
+}

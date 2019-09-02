@@ -8,6 +8,7 @@ int main()
     flBegin();
     flCbefore_begin();
     flCbegin();
+    flCend();
 
     return 0;
 }

@@ -75,3 +75,10 @@ flName.cbefore_begin();
 This is the const-guarranteed version of begin(). Format:
 
 flName.cbegin();
+
+
+6. std::forward_list::cend();
+
+This is the const-guarranteed version of end(). Format:
+
+flName.cend();
