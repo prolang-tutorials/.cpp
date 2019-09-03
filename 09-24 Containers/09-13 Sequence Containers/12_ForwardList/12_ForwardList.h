@@ -244,3 +244,17 @@ void flEmpty()
     std::cout << "flOne " << (flOne.empty() ? "is empty." : "is not empty." ) << std::endl;
     std::cout << "flTwo " << (flTwo.empty() ? "is empty." : "is not empty." ) << '\n' << std::endl;
 }
+
+void flEnd()
+{
+    std::cout << "std::forward_list::end()" << std::endl;
+
+    std::forward_list<int> flOne = { 10, 20, 30, 40 };
+
+    std::cout << "flOne contains:";
+    for (auto flIt = flOne.begin(); flIt != flOne.end(); ++flIt)
+    {
+        std::cout << " " << *flIt;
+    }
+    std::cout << '\n' << std::endl;
+}

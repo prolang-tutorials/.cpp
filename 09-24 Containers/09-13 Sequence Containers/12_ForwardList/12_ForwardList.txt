@@ -113,3 +113,11 @@ flName.emplace_front(value);
 This function returns a boolean value for whether the obejct is empty or not. The function takes no parameters. Format:
 
 flName.empty();
+
+
+11. std::forward_list::end();
+
+This function returns an iterator that points to the after-last element in the object. In the case that the forward_list is empty, 
+the  iterator that is returned points to the first (empty) element. Takes no parameters. Format:
+
+flName.end();
