@@ -14,6 +14,7 @@ int main()
     flEmplace_front();
     flEmpty();
     flEnd();
+    flErase_after();
 
     return 0;
 }

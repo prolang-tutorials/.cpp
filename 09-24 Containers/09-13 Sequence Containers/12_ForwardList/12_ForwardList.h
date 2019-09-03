@@ -258,3 +258,28 @@ void flEnd()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flErase_after()
+{
+    std::cout << "std::forward_list::erase_after()" << std::endl;
+
+    std::forward_list<int> flOne = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    std::forward_list<int>::iterator flIt = flOne.begin();
+
+    std::cout << "flOne contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+    
+    flIt = flOne.erase_after(flIt);
+    flIt = flOne.erase_after(flIt, flOne.end());
+
+    std::cout << "flOne now contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}

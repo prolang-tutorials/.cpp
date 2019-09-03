@@ -121,3 +121,14 @@ This function returns an iterator that points to the after-last element in the o
 the  iterator that is returned points to the first (empty) element. Takes no parameters. Format:
 
 flName.end();
+
+
+12. std::forward_list::erase_after();
+
+This function erases and destroys any element or list of elements in the object. This function returns an iterator to the element
+immediately after the last element destroyed. There are two different argument sets you can put into the arglist. To erase one
+element, just push the number of the element into the arglist, but to delete a range of elements, input the first and last element
+numbers. Format:
+
+flName.erase_after(elementNumber);
+flName.erase_after(firstElement, lastElement);
