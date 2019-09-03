@@ -12,6 +12,7 @@ int main()
     flClear();
     flEmplace_after();
     flEmplace_front();
+    flEmpty();
 
     return 0;
 }

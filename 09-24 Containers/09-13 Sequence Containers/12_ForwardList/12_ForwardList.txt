@@ -106,3 +106,10 @@ This function emplaces an element value into the front of the object. It then be
 parameter, the element value you want to emplace. Format:
 
 flName.emplace_front(value);
+
+
+10. std::forward_list::empty();
+
+This function returns a boolean value for whether the obejct is empty or not. The function takes no parameters. Format:
+
+flName.empty();

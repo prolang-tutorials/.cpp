@@ -233,3 +233,14 @@ void flEmplace_front()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flEmpty()
+{
+    std::cout << "std::forward_list::empty()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+    std::forward_list<int> flTwo;
+
+    std::cout << "flOne " << (flOne.empty() ? "is empty." : "is not empty." ) << std::endl;
+    std::cout << "flTwo " << (flTwo.empty() ? "is empty." : "is not empty." ) << '\n' << std::endl;
+}
