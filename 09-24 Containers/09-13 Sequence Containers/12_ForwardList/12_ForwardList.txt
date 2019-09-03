@@ -132,3 +132,10 @@ numbers. Format:
 
 flName.erase_after(elementNumber);
 flName.erase_after(firstElement, lastElement);
+
+
+13. std::forward_list::front();
+
+Returns a direct reference to the first element in the object. The function takes no parameters. Format:
+
+flName.front();

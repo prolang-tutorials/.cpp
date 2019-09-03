@@ -283,3 +283,26 @@ void flErase_after()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flFront()
+{
+    std::cout << "std::forward_list::front()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.front() = 11;
+
+    std::cout << "flOne now contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}

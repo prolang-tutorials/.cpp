@@ -15,6 +15,7 @@ int main()
     flEmpty();
     flEnd();
     flErase_after();
+    flFront();
 
     return 0;
 }
