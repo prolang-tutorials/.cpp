@@ -176,6 +176,7 @@ void flClear()
 
     std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
 
+    std::cout << "flOne contains:";
     for (auto x = flOne.begin(); x != flOne.end(); ++x)
     {
         std::cout << " " << *x;
@@ -183,7 +184,8 @@ void flClear()
     std::cout << std::endl;
 
     flOne.clear();
-
+    
+    std::cout << "flOne now contains:";
     for (auto x = flOne.begin(); x != flOne.end(); ++x)
     {
         std::cout << " " << *x;
