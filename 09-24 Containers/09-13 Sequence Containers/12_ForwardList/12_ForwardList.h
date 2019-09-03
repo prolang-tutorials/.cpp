@@ -210,3 +210,26 @@ void flEmplace_after()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flEmplace_front()
+{
+    std::cout << "std::forward_list::emplace_front()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.emplace_front(10);
+
+    std::cout << "flOne contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}

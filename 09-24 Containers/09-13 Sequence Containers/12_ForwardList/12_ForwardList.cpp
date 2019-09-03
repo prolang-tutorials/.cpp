@@ -11,6 +11,7 @@ int main()
     flCend();
     flClear();
     flEmplace_after();
+    flEmplace_front();
 
     return 0;
 }

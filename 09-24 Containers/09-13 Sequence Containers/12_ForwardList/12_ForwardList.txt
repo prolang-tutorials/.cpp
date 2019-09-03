@@ -98,3 +98,11 @@ This function takes an element value, and emplaces it after some position. It ta
 the position after which to emplace this element. Format:
 
 flName.empace_after(position, value);
+
+
+9. std::forward_list::emplace_front();
+
+This function emplaces an element value into the front of the object. It then becomes the beginning element. The function takes one
+parameter, the element value you want to emplace. Format:
+
+flName.emplace_front(value);
