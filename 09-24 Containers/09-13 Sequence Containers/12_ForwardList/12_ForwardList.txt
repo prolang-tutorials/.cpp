@@ -90,3 +90,11 @@ This function clears out the elements from the object, and destroys them, openin
 Format:
 
 flName.clear();
+
+
+8. std::forward_list::emplace_after();
+
+This function takes an element value, and emplaces it after some position. It takes 2 parameters, being the element value(s), and 
+the position after which to emplace this element. Format:
+
+flName.empace_after(position, value);

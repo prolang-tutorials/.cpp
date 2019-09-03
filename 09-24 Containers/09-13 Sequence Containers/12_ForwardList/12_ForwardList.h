@@ -192,3 +192,21 @@ void flClear()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flEmplace_after()
+{
+    std::cout << "std::forward_list::emplace_after()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+    std::forward_list<int>::iterator flIt = flOne.before_begin();
+
+    flIt = flOne.emplace_after(flIt, 10);
+    flIt = flOne.emplace_after(flIt, 20);
+
+    std::cout << "flOne contains:";
+    for(auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
