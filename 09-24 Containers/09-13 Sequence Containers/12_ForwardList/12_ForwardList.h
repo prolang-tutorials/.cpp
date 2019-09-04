@@ -335,3 +335,45 @@ void flGet_allocator()
 
     flOne.get_allocator().deallocate(flIt, 5);
 }
+
+void flInsert_after()
+{
+    std::cout << "std::forward_list::insert_after()" << std::endl;
+
+    std::forward_list<int> flOne;
+    std::forward_list<int> flTwo = { 1, 2, 3, 4, 5 };
+    std::forward_list<int>::iterator flIt;
+
+    flIt = flOne.insert_after(flOne.before_begin(), 10);
+    flIt = flTwo.insert_after(flIt, 2, 20);
+    
+    std::cout << "flOne before transfer:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo before transfer:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flIt = flOne.insert_after(flOne.before_begin(), flTwo.begin(), flTwo.end());
+
+    std::cout << "flOne post insertion:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo post insertion:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}

@@ -146,3 +146,19 @@ flName.front();
 Returns the allocator object that associates with the object. Takes no parameters. Format:
 
 flName.get_allocator();
+
+
+15. std::forward_list::insert_after();
+
+This function is similar to emplace_after, but instead of copying the elements into the new object, this one copies them directly.
+The return value is an iterator pointing at the last newly inserted element in the object, but if no new elements were added, it 
+just points to the position where they would've been added had something not gone wrong or you weren't trying to copy from an empty
+container. There are three ways this function can take parameters. The first and most common is (position, value). This just takes a
+single value and inserts it as a new element in the container object. The second is similar to the first, but with one more argument,
+(pos, amount, value). The amount value is for how many of the same value you want to insert. The third argument pattern is the the 
+copy pattern. This is (position, transferBeginPos, transferEndPos), and starts from wherever the transferBeginPos is, and will
+begin inserting from the specified position, and will stop when transferEndPos has been reached. Formats:
+
+flName.insert_after(pos, val);
+flName.insert_after(pos, amount, val);
+flname.insert_after(pos, transBegPos, transEndPos);
