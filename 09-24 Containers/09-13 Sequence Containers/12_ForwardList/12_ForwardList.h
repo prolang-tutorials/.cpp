@@ -377,3 +377,12 @@ void flInsert_after()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flMax_size()
+{
+    std::cout << "std::forward_list::max_size()" << std::endl;
+
+    std::forward_list<int> flOne;
+
+    std::cout << flOne.max_size() << '\n' << std::endl;
+}

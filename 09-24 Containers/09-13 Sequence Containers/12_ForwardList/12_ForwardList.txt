@@ -162,3 +162,11 @@ begin inserting from the specified position, and will stop when transferEndPos h
 flName.insert_after(pos, val);
 flName.insert_after(pos, amount, val);
 flname.insert_after(pos, transBegPos, transEndPos);
+
+
+16. std::forward_list::max_size();
+
+This function checks and returns an unsigned int representing the amount of max memory space you can allot to the container object.
+Format:
+
+flName.max_size();

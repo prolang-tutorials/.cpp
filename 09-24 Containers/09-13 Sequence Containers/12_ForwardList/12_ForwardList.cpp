@@ -18,6 +18,7 @@ int main()
     flFront();
     flGet_allocator();
     flInsert_after();
+    flMax_size();
 
     return 0;
 }
