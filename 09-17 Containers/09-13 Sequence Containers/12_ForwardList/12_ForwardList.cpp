@@ -27,6 +27,7 @@ int main()
     flResize();
     flReverse();
     flSort();
+    flSplice_after();
 
     return 0;
 }

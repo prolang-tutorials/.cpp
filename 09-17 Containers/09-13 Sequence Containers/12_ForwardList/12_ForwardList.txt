@@ -241,3 +241,17 @@ This function sorts, by default, sorts the forward_list from least to greatest. 
 the functionality changes. Format:
 
 flName.sort(potentialArgs);
+
+
+25. std::forward_list::splice_after();
+
+Transfer elements from another forward_list into the container by inserting them after the element pointed by (pos). This effectively inserts those
+elements into the container and removes them from the transfering object, altering the sizes of both containers. The operation does not involve the
+construction or destruction of any element. They are transferred, no matter whether the forward_list is an lvalue or an rvalue, or whether the
+value_type supports move-construction or not. There are three ways to use this function. The first version transfers all the elements of on object into
+the container. The second version transfers only the element pointed by i from one object into the container. The third version transfers the range
+(first,last) from one object into the container. Formats:
+
+flName.splice_after(insertLocation, objectToCopy);
+flName.splice_after(insertLocation, objectToCopy, objectToCopySingleElement, iterator);
+flName.splice_after(insertLocation, objectToCopyRangeBegin, objectToCopyRangeEnd, iterator);

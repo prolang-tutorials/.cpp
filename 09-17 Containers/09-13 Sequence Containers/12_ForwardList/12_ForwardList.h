@@ -642,3 +642,48 @@ void flSort()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flSplice_after()
+{
+    std::cout << "std::forward_list::splice_after()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+    std::forward_list<int> flTwo = { 10, 20, 30, 40, 50 };
+    std::forward_list<int>::iterator flIt = flOne.begin();
+
+    std::cout << "flOne before splice:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.sort();
+
+    std::cout << "flTwo before splice:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.splice_after(flOne.before_begin(), flTwo);
+    flTwo.splice_after(flTwo.before_begin(), flOne, flOne.begin(), flIt);
+    flOne.splice_after(flOne.before_begin(), flTwo, flTwo.begin());
+
+    std::cout << "flOne after splice:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.sort();
+
+    std::cout << "flTwo after splice:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
