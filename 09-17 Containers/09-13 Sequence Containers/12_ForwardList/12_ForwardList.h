@@ -596,3 +596,49 @@ void flResize()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flReverse()
+{
+    std::cout << "std::forward_list::reverse()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne before reverse:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.reverse();
+
+    std::cout << "flOne after reverse:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
+
+void flSort()
+{
+    std::cout << "std::forward_list::sort()" << std::endl;
+
+    std::forward_list<int> flOne = { 3, 4, 2, 1, 5 };
+
+    std::cout << "flOne before sort:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.sort();
+
+    std::cout << "flOne after sort:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}

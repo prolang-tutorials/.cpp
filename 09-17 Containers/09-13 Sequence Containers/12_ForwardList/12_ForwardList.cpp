@@ -25,6 +25,8 @@ int main()
     flPush_front();
     flRemove();
     flResize();
+    flReverse();
+    flSort();
 
     return 0;
 }

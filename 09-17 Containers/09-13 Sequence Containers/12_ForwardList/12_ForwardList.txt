@@ -226,3 +226,18 @@ argument (val), which will use the value, and fill all the new spaces with it. F
 
 flName.resize(size);
 flName.resize(size, val);
+
+
+23. std::forward_list::reverse();
+
+Reverses the order of the elements in the container object. Format:
+
+flName.reverse();
+
+
+24. std::forward_list::sort();
+
+This function sorts, by default, sorts the forward_list from least to greatest. By inputting different functions or operators into the paramArgs,
+the functionality changes. Format:
+
+flName.sort(potentialArgs);
