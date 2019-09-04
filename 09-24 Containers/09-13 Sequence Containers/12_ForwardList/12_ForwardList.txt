@@ -34,7 +34,7 @@ These are very similar to the rest of the Sequence Container header file constru
 see a new std function. This is std::move. It can be found in the <utility> header file, and is used to move the values of an
 object to a different object.
 
-Overall, in this header file, there are 28 member functions.
+Overall, in this header file, there are 27 member functions.
 
 1. std::forward_list::assign();
 
@@ -217,3 +217,12 @@ This function takes one parameter, and looks for any iterations of that value in
 Format:
 
 flName.remove(val);
+
+
+22. std::forward_list::resize();
+
+This function resizes the container object to parameter value (size). If you want to increase the size, you can also put in another parameter
+argument (val), which will use the value, and fill all the new spaces with it. Format:
+
+flName.resize(size);
+flName.resize(size, val);

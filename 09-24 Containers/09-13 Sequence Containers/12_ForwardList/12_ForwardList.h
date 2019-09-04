@@ -552,12 +552,44 @@ void flRemove()
     {
         std::cout << " " << x;
     }
-    
+
     std::cout << std::endl;
 
     flOne.remove(3);
 
     std::cout << "flOne after removal:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
+
+void flResize()
+{
+    std::cout << "std::forward_list::resize()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne before resize:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.resize(3);
+
+    std::cout << "flOne after resize 1:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+    
+    flOne.resize (5, 10);
+
+    std::cout << "flOne after resize 2:";
     for (auto& x : flOne)
     {
         std::cout << " " << x;

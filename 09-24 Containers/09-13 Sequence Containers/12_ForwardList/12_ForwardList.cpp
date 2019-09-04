@@ -24,6 +24,7 @@ int main()
     flPop_front();
     flPush_front();
     flRemove();
+    flResize();
 
     return 0;
 }
