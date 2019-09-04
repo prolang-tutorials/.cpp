@@ -188,3 +188,10 @@ before the call, and existing elements precede those equivalent inserted from x)
 
 flName.merge(x);
 flName.merge(x, comp);
+
+
+18. std::forward_list::operator=;
+
+This function just uses the assignment operator, and assigns something to something. Format:
+
+flName = otherFlName;

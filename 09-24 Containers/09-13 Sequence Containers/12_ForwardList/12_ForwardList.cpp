@@ -20,6 +20,7 @@ int main()
     flInsert_after();
     flMax_size();
     flMerge();
+    flOperatorEqualsSign();
 
     return 0;
 }

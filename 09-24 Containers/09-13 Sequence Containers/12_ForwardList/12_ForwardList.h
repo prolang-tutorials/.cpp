@@ -463,3 +463,41 @@ void flMerge()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flOperatorEqualsSign()
+{
+    std::cout << "std::forward_list::operator=" << std::endl;
+
+    std::forward_list<int> flOne;
+    std::forward_list<int> flTwo = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne before assignment:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo before assignment:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne = flTwo;
+
+    std::cout << "flOne after assignment:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo after assignment:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
