@@ -19,6 +19,7 @@ int main()
     flGet_allocator();
     flInsert_after();
     flMax_size();
+    flMerge();
 
     return 0;
 }

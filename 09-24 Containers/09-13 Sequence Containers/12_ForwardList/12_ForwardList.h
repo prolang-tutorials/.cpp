@@ -1,6 +1,7 @@
 #include <iostream>
 #include <forward_list>
 #include <utility>
+#include <functional>
 
 void creatingForward_lists()
 {
@@ -385,4 +386,80 @@ void flMax_size()
     std::forward_list<int> flOne;
 
     std::cout << flOne.max_size() << '\n' << std::endl;
+}
+
+void flMerge()
+{
+    std::cout << "std::forward_list::merge()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+    std::forward_list<int> flTwo = { 10, 20, 30, 40, 50 };
+    std::forward_list<int> flThree = { 100, 200, 300, 400, 500 };
+
+    std::cout << "flOne pre-changes:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo pre-changes:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flThree pre-changes:";
+    for (auto& x : flThree)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.merge(flTwo);
+
+    std::cout << "flOne post-change 1:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo post-change 1:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flThree post-change 1:";
+    for (auto& x : flThree)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.merge(flThree, std::greater<int>());
+
+    std::cout << "flOne post-change 2:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flTwo post-change 2:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    std::cout << "flThree post-change 2:";
+    for (auto& x : flThree)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
 }

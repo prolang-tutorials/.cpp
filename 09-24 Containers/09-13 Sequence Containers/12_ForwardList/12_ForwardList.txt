@@ -170,3 +170,21 @@ This function checks and returns an unsigned int representing the amount of max 
 Format:
 
 flName.max_size();
+
+
+17. std::forward_list::merge();
+
+This function merges x into the forward_list by transferring all of its elements at their respective ordered positions into the container
+(both containers shall already be ordered). This effectively removes all the elements in x (which becomes empty), and inserts them into
+their ordered position within container (which expands in size by the number of elements transferred). The operation is performed without
+constructing nor destroying any element: they are transferred, no matter whether x is an lvalue or an rvalue, or whether the value_type
+supports move-construction or not. The template versions with two parameters (2), have the same behavior, but take a specific predicate
+(comp) to perform the comparison operation between elements. This comparison shall produce a strict weak ordering of the elements (i.e.,
+a consistent transitive comparison, without considering its reflexiveness). This function requires that the forward_list containers have
+their elements already ordered by value (or by comp) before the call. For an alternative on unordered lists, see list::splice. Assuming
+such ordering, each element of x is inserted at the position that corresponds to its value according to the strict weak ordering defined
+by operator< or comp. The resulting order of equivalent elements is stable (i.e., equivalent elements preserve the relative order they had
+before the call, and existing elements precede those equivalent inserted from x). Formats:
+
+flName.merge(x);
+flName.merge(x, comp);
