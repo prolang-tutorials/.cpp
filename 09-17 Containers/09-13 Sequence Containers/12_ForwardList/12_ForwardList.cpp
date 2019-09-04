@@ -28,6 +28,8 @@ int main()
     flReverse();
     flSort();
     flSplice_after();
+    flSwap();
+    flUnique();
 
     return 0;
 }

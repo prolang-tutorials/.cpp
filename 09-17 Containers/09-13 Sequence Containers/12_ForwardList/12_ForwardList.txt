@@ -255,3 +255,17 @@ the container. The second version transfers only the element pointed by i from o
 flName.splice_after(insertLocation, objectToCopy);
 flName.splice_after(insertLocation, objectToCopy, objectToCopySingleElement, iterator);
 flName.splice_after(insertLocation, objectToCopyRangeBegin, objectToCopyRangeEnd, iterator);
+
+
+26. std::forward_list::swap();
+
+Swaps the elements of the two forward_lists in the function call. Takes one parameter, being the second of the two containers. Format:
+
+flName.swap(flNameTwo);
+
+
+27. std::forward_list::unique();
+
+This function just removes any duplicate values. Format:
+
+flName.unique();

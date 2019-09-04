@@ -687,3 +687,69 @@ void flSplice_after()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flSwap()
+{
+    std::cout << "std::forward_list::swap()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+    std::forward_list<int> flTwo = { 10, 20, 30, 40, 50 };
+
+    std::cout << "flOne before swap:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.sort();
+
+    std::cout << "flTwo before swap:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.swap(flTwo);
+
+    std::cout << "flOne after swap:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.sort();
+
+    std::cout << "flTwo after swap:";
+    for (auto& x : flTwo)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
+
+void flUnique()
+{
+    std::cout << "std::forward_list::unique()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5, 5 };
+    int x;
+
+    std::cout << "flOne contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.unique();
+
+    std::cout << "flOne now contains:";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}
