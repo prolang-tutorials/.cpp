@@ -23,6 +23,7 @@ int main()
     flOperatorEqualsSign();
     flPop_front();
     flPush_front();
+    flRemove();
 
     return 0;
 }

@@ -209,3 +209,11 @@ flName.pop_front();
 This function takes one parameter (val), and pushes said value into a new element at the beginning of the object. Format:
 
 flName.push_front(val);
+
+
+21. std::forward_list::remove();
+
+This function takes one parameter, and looks for any iterations of that value in the object. If it finds any, they are removed and destroyed.
+Format:
+
+flName.remove(val);
