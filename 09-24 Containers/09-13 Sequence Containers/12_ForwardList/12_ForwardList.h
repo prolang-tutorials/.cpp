@@ -515,3 +515,28 @@ void flPop_front()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flPush_front()
+{
+    std::cout << "std::forward_list::push_front()" << std::endl;
+
+    std::forward_list<int> flOne = { 1, 2, 3, 4, 5 };
+
+    std::cout << "flOne before push_front():";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << std::endl;
+
+    flOne.push_front(10);
+    flOne.push_front(20);
+    flOne.push_front(30);
+
+    std::cout << "flOne after push_front():";
+    for (auto& x : flOne)
+    {
+        std::cout << " " << x;
+    }
+    std::cout << '\n' << std::endl;
+}

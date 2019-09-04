@@ -22,6 +22,7 @@ int main()
     flMerge();
     flOperatorEqualsSign();
     flPop_front();
+    flPush_front();
 
     return 0;
 }

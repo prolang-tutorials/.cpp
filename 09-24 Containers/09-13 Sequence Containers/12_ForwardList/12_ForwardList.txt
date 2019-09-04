@@ -202,3 +202,10 @@ flName = otherFlName;
 This function removes and destroys the first element in the container object. Format:
 
 flName.pop_front();
+
+
+20. std::forward_list::push_front();
+
+This function takes one parameter (val), and pushes said value into a new element at the beginning of the object. Format:
+
+flName.push_front(val);
