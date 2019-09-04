@@ -21,6 +21,7 @@ int main()
     flMax_size();
     flMerge();
     flOperatorEqualsSign();
+    flPop_front();
 
     return 0;
 }

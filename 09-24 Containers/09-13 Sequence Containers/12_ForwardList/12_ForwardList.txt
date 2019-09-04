@@ -195,3 +195,10 @@ flName.merge(x, comp);
 This function just uses the assignment operator, and assigns something to something. Format:
 
 flName = otherFlName;
+
+
+19. std::forward_list::pop_front();
+
+This function removes and destroys the first element in the container object. Format:
+
+flName.pop_front();
