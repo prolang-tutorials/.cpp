@@ -23,7 +23,7 @@ $ cd ..
 - This goes back one directory. cd is the Change Directory command. .. after it takes you back one directory. The name of a directory in the one you are in currently can be put in after cd to take you to that directory.
 
 ```bash
-$ g++ (fileName).cpp
+$ g++ (fileName).cpp -std=c++17
 ```
 - If you are running Windows or Mac, this will compile your code, and make a file in the directory you are currently in. This file is called a.out.
 
