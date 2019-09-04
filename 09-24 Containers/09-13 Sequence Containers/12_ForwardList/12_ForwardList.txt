@@ -139,3 +139,10 @@ flName.erase_after(firstElement, lastElement);
 Returns a direct reference to the first element in the object. The function takes no parameters. Format:
 
 flName.front();
+
+
+14. std::forward_list::get_allocator();
+
+Returns the allocator object that associates with the object. Takes no parameters. Format:
+
+flName.get_allocator();

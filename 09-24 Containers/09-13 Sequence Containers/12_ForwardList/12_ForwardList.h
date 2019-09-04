@@ -306,3 +306,32 @@ void flFront()
     }
     std::cout << '\n' << std::endl;
 }
+
+void flGet_allocator()
+{
+    std::cout << "std::forward_list::get_allocator" << std::endl;
+
+    std::forward_list<int> flOne;
+    int* flIt;
+
+    flIt = flOne.get_allocator().allocate(5);
+
+    for (int x = 0; x < 5; ++x)
+    {
+        flOne.get_allocator().construct(&flIt[x], x + 1);
+    }
+
+    std::cout << "flOne contains:";
+    for (int x = 0; x < 5; ++x)
+    {
+        std::cout << " " << flIt[x];
+    }
+    std::cout << '\n' << std::endl;
+
+    for (int x = 0; x < 5; ++x)
+    {
+        flOne.get_allocator().destroy(&flIt[x]);
+    }
+
+    flOne.get_allocator().deallocate(flIt, 5);
+}

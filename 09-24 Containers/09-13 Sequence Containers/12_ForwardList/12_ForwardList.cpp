@@ -16,6 +16,7 @@ int main()
     flEnd();
     flErase_after();
     flFront();
+    flGet_allocator();
 
     return 0;
 }
