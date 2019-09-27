@@ -27,3 +27,29 @@ void constructingMaps()
     bool(*functionPointer)(char, char) = functionComparison;
     std::map<char, int, bool(*)(char, char)> mFive (functionPointer);
 }
+
+void mapAt()
+{
+    // Look at this. This is so annoying to write out. This right here is the main reason I hate initializing maps like so.
+    std::map<char, int> mOne = { { 'a', 0 }, { 'b', 0 }, { 'c', 0 },  { 'd', 0 }, { 'e', 0 } };
+
+    std::cout << "mOne contains: " << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+
+    mOne.at('a') = 1;
+    mOne.at('b') = 2;
+    mOne.at('c') = 3;
+    mOne.at('d') = 4;
+    mOne.at('e') = 5;
+
+    std::cout << "mOne now contains: " << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+}

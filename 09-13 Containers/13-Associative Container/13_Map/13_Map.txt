@@ -23,4 +23,13 @@ at contruction. I just prefer to use the first way. Here's the five ways I manag
 4. std::map<type1, type2, comparisonFunction> mapName;
 5. std::map<type1, type2, comparisonFunctionPointer> mapName;
 
-All together, there are 
+All together, there are 28 member functions.
+
+1. std::map::at();
+
+This is the accessor method for maps. It is used to return a reference to the mapped value that has the key input in the parameters.
+This function commonly throws errors, so make sure your keys are typed out correctly, case-sensitively. If a key that does not exist
+is put into the function parameter list, the function throws the out_of_range exception. This can return a const mapped_type reference
+if the map itself is const-qualified. Format:
+
+mapName.at(key);

@@ -3,6 +3,7 @@
 int main()
 {
     constructingMaps();
+    mapAt();
 
     return 0;
 }
