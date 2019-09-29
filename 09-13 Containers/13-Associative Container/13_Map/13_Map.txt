@@ -55,3 +55,11 @@ mapName.cbegin();
 Const version of end(). Takes no parameters. C++11 function. Format:
 
 mapName.cend();
+
+
+5. std::map::clear();
+
+Clears and destroys all element keys and values from the map object, effectively clearing up memory. The size of the map becomes 0.
+Takes no parameters. Format:
+
+mapName.clear();
