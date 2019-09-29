@@ -4,6 +4,7 @@ int main()
 {
     constructingMaps();
     mapAt();
+    mapBegin();
 
     return 0;
 }

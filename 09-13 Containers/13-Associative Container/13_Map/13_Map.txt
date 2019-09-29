@@ -30,6 +30,14 @@ All together, there are 28 member functions.
 This is the accessor method for maps. It is used to return a reference to the mapped value that has the key input in the parameters.
 This function commonly throws errors, so make sure your keys are typed out correctly, case-sensitively. If a key that does not exist
 is put into the function parameter list, the function throws the out_of_range exception. This can return a const mapped_type reference
-if the map itself is const-qualified. Format:
+if the map itself is const-qualified. This is a C++11 function, so make sure to compile as C++11 or higher if you are using this. Format:
 
 mapName.at(key);
+
+
+2. std::map::begin();
+
+Returns an iterator (or const_iterator) that refers to the first element in the map according to the map object's sorting function.
+The function takes to parameters. Format:
+
+mapName.begin();
