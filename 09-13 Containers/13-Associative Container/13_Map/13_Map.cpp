@@ -5,6 +5,7 @@ int main()
     constructingMaps();
     mapAt();
     mapBegin();
+    mapCbegin();
 
     return 0;
 }

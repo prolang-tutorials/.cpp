@@ -41,3 +41,10 @@ Returns an iterator (or const_iterator) that refers to the first element in the 
 The function takes to parameters. Format:
 
 mapName.begin();
+
+
+3. std::map::cbegin();
+
+Const version of begin(). Takes no parameters. Format:
+
+mapName.cbegin();
