@@ -8,6 +8,7 @@ int main()
     mapCbegin();
     mapCend();
     mapClear();
+    mapCount();
 
     return 0;
 }

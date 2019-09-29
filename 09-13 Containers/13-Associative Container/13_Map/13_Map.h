@@ -119,3 +119,27 @@ void mapClear()
     }
     std::cout << std::endl;
 }
+
+void mapCount()
+{
+    std::cout << "std::map::clear()" << std::endl;
+
+    // This actually took an ungodly amount of time to write out. Never do this.
+    std::map<char, int> mOne = { { 'a', 1 }, { 'd', 2 }, { 'f', 3}, { 'j', 4 }, { 'i', 5 }, { 'l', 6 }, { 'o', 7 }, { 'r', 8 }, { 'u', 9 }, { 'x', 10 } };
+    char a;
+
+    for (a = 'a'; a < 'z'; ++a)
+    {
+        std::cout << "The key: " << a;
+
+        if (mOne.count(a) > 0)
+        {
+            std::cout << " exists with value: " << mOne.at(a) << std::endl;
+        }
+        else
+        {
+            std::cout << " does not exist." << std::endl;
+        }
+    }
+    std::cout << std::endl;
+}

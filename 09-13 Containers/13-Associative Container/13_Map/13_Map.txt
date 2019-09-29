@@ -63,3 +63,13 @@ Clears and destroys all element keys and values from the map object, effectively
 Takes no parameters. Format:
 
 mapName.clear();
+
+
+6. std::map::count();
+
+This is a very interesting and useful member function of map. Basically, it goes through the entire map, and returns a boolean-like value
+based on what exists in the map object. It takes one parameter, being the key you are searching for. If it finds a key that equals your key
+input parameter, the function returns an unsigned_int value of 1, otherwise, it returns an unsigned_int value of 0. This is basically just a
+boolean, but in integer form. Format:
+
+mapName.count(keyValue);
