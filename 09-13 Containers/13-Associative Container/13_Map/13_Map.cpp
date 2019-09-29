@@ -6,6 +6,7 @@ int main()
     mapAt();
     mapBegin();
     mapCbegin();
+    mapCend();
 
     return 0;
 }

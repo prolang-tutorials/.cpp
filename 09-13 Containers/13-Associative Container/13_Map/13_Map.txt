@@ -45,6 +45,13 @@ mapName.begin();
 
 3. std::map::cbegin();
 
-Const version of begin(). Takes no parameters. Format:
+Const version of begin(). Takes no parameters. C++11 function. Format:
 
 mapName.cbegin();
+
+
+4. std::map::cend();
+
+Const version of end(). Takes no parameters. C++11 function. Format:
+
+mapName.cend();

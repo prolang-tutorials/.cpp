@@ -83,3 +83,17 @@ void mapCbegin()
     }
     std::cout << std::endl;
 }
+
+void mapCend()
+{
+    std::cout << "std::map::cend()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+
+    std::cout << "mOne contents:" << std::endl;
+    for (std::map<char, int>::const_iterator mIt = mOne.cbegin(); mIt != mOne.cend(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+    std::cout << std::endl;
+}
