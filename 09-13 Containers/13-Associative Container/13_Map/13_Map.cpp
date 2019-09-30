@@ -10,6 +10,7 @@ int main()
     mapClear();
     mapCount();
     mapCrbegin();
+    mapCrend();
 
     return 0;
 }

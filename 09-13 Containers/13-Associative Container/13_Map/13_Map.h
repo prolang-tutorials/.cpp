@@ -157,3 +157,17 @@ void mapCrbegin()
     }
     std::cout << std::endl;
 }
+
+void mapCrend()
+{
+    std::cout << "std::map::crend()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+
+    std::cout << "mOne backwards contains:" << std::endl;
+    for (std::map<char, int>::const_reverse_iterator mIt = mOne.crbegin(); mIt != mOne.crend(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+    std::cout << std::endl;
+}

@@ -82,3 +82,11 @@ to mess with your head, keep in mind that this is a bidirectional iterator, mean
 brain food? Takes no parameters. This is a C++11 function. Format:
 
 mapName.crbegin();
+
+
+8. std::map::crend();
+
+This is the end version of the const_reverse_iterator pointer member functions. It points at the reverse end (pre-first) element in the map object.
+This is a C++11 function, and takes no parameters. Format:
+
+mapName.crend();
