@@ -11,6 +11,7 @@ int main()
     mapCount();
     mapCrbegin();
     mapCrend();
+    mapEmplace();
 
     return 0;
 }

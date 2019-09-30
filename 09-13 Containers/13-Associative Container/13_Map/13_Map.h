@@ -171,3 +171,27 @@ void mapCrend()
     }
     std::cout << std::endl;
 }
+
+void mapEmplace()
+{
+    std::cout << "std::map::emplace()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 } };
+
+    std::cout << "mOne contains:" << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+    
+    mOne.emplace('b', 2);
+    mOne.emplace('c', 3);
+
+    std::cout << "mOne now contains:" << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+}

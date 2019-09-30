@@ -90,3 +90,12 @@ This is the end version of the const_reverse_iterator pointer member functions. 
 This is a C++11 function, and takes no parameters. Format:
 
 mapName.crend();
+
+
+9. std::map::emplace();
+
+This is a very important member function in this header, and has to be used very carefully if you do not want weird results to happen. If the new
+key that is being emplaced into the map already exists, the new element will not be added, and nothing happens, the program keeps on working. This 
+is a C++11 function. It takes 2 parameters, the key and the mapped value. Format:
+
+mapName.emplace(key, value);
