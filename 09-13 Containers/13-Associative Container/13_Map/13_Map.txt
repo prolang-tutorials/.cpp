@@ -73,3 +73,12 @@ input parameter, the function returns an unsigned_int value of 1, otherwise, it 
 boolean, but in integer form. Format:
 
 mapName.count(keyValue);
+
+
+7. std::map::crbegin();
+
+This is the function that returns a const_reverse_iterator that points to the reverse beginning (the end) of the map object. If you really want
+to mess with your head, keep in mind that this is a bidirectional iterator, meaning back and front is both sides simultaneously. How's that for 
+brain food? Takes no parameters. This is a C++11 function. Format:
+
+mapName.crbegin();

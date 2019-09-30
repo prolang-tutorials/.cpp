@@ -125,7 +125,7 @@ void mapCount()
     std::cout << "std::map::clear()" << std::endl;
 
     // This actually took an ungodly amount of time to write out. Never do this.
-    std::map<char, int> mOne = { { 'a', 1 }, { 'd', 2 }, { 'f', 3}, { 'j', 4 }, { 'i', 5 }, { 'l', 6 }, { 'o', 7 }, { 'r', 8 }, { 'u', 9 }, { 'x', 10 } };
+    std::map<char, int> mOne = { { 'a', 1 }, { 'd', 2 }, { 'f', 3 }, { 'j', 4 }, { 'i', 5 }, { 'l', 6 }, { 'o', 7 }, { 'r', 8 }, { 'u', 9 }, { 'x', 10 } };
     char a;
 
     for (a = 'a'; a < 'z'; ++a)
@@ -140,6 +140,20 @@ void mapCount()
         {
             std::cout << " does not exist." << std::endl;
         }
+    }
+    std::cout << std::endl;
+}
+
+void mapCrbegin()
+{
+    std::cout << "std::map::crbegin()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+
+    std::cout << "mOne backwards contains:" << std::endl;
+    for (std::map<char, int>::const_reverse_iterator mIt = mOne.crbegin(); mIt != mOne.crend(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
     }
     std::cout << std::endl;
 }
