@@ -12,6 +12,7 @@ int main()
     mapCrbegin();
     mapCrend();
     mapEmplace();
+    mapEmplace_hint();
 
     return 0;
 }

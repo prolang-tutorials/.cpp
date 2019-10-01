@@ -195,3 +195,28 @@ void mapEmplace()
     }
     std::cout << std::endl;
 }
+
+void mapEmplace_hint()
+{
+    std::cout << "std::map::emplace_hint()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+    std::map<char, int>::iterator mIt = mOne.begin();
+
+    std::cout << "mOne contains:" << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+
+    mIt = mOne.emplace_hint(mIt, 'd', 4);
+    mOne.emplace_hint(mIt, 'e', 5);
+
+    std::cout << "mOne now contains:" << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+}

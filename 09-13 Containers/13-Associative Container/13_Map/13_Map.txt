@@ -99,3 +99,13 @@ key that is being emplaced into the map already exists, the new element will not
 is a C++11 function. It takes 2 parameters, the key and the mapped value. Format:
 
 mapName.emplace(key, value);
+
+
+10. std::map::emplace_hint();
+
+This function is very similar to emplace(), but has an extension, the _hint() part. Even though the map will still sort the element in using its own 
+comparison function, this helps the object speed up the process. It is like the "guess" function on a graphing calculator when evaluating equations.
+The function returns an iterator to the newly mapped element, if the insertion is successful, otherwise, nothing is returned. The function takes 3
+parameters, key, value, and location. Watch the ordering carefully. This is a C++11 function. Format:
+
+mapName.emplace_hint(location, key, value);
