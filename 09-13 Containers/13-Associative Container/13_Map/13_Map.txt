@@ -109,3 +109,10 @@ The function returns an iterator to the newly mapped element, if the insertion i
 parameters, key, value, and location. Watch the ordering carefully. This is a C++11 function. Format:
 
 mapName.emplace_hint(location, key, value);
+
+
+11. std::map::empty();
+
+This function returns a boolean (1 - True, or 0 - False) based on whether the map object is empty or not. Takes no parameters. Format:
+
+mapName.empty();

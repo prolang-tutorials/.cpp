@@ -220,3 +220,18 @@ void mapEmplace_hint()
     }
     std::cout << std::endl;
 }
+
+void mapEmpty()
+{
+    std::cout << "std::map::empty()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+
+    std::cout << "mOne contains:" << std::endl;
+    while (!mOne.empty())
+    {
+        std::cout << mOne.begin()->first << " maps to " << mOne.begin()->second << std::endl;
+        mOne.erase(mOne.begin());
+    }
+    std::cout << std::endl;
+}
