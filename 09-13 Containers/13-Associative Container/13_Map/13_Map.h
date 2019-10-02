@@ -264,3 +264,34 @@ void mapEqual_range()
 
     std::cout << std::endl;
 }
+
+void mapErase()
+{
+    std::cout << "std:map::erase()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 }, { 'd', 4 }, { 'e', 5 } };
+    std::map<char, int>::iterator mIt;
+
+    std::cout << "Before erasing: " << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+
+    mOne.erase('a');
+
+    mIt = mOne.find('b');
+
+    mOne.erase(mIt);
+
+    mIt = mOne.find('d');
+
+    mOne.erase(mIt, mOne.end());
+
+    std::cout << "After erasing: " << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+}

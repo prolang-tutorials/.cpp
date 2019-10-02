@@ -134,3 +134,12 @@ container's internal comparison object or function (key_comp). Two keys are cons
 reflexively (i.e., no matter the order in which the keys are passed as arguments). This function takes one parameter, key. Format:
 
 mapName.equal_range(key);
+
+
+14. std::map::erase();
+
+This function deletes the element specified in the parameter list with variable "element", "element begin" and "element end" to erase a range of them.
+Formats:
+
+mapName.erase(key/element);
+mapName.erase(firstElement, lastElement);
