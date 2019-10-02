@@ -249,3 +249,18 @@ void mapEnd()
     }
     std::cout << std::endl;
 }
+
+void mapEqual_range()
+{
+    std::cout << "std::map::equal_range()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 }, { 'd', 4 }, { 'e', 5 } };
+    std::pair<std::map<char, int>::iterator, std::map<char, int>::iterator> pOne;
+
+    pOne = mOne.equal_range('c');
+
+    std::cout << "The lower bound of pOne is " << pOne.first->first << " mapping to " << pOne.first->second << std::endl;
+    std::cout << "The upper bound of pOne is " << pOne.second->first << " mapping to " << pOne.second->second << std::endl;
+
+    std::cout << std::endl;
+}

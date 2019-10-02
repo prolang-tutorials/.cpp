@@ -15,6 +15,7 @@ int main()
     mapEmplace_hint();
     mapEmpty();
     mapEnd();
+    mapEqual_range();
 
     return 0;
 }

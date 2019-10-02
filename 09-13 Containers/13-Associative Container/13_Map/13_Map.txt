@@ -123,3 +123,14 @@ mapName.empty();
 This is the function that returns a pointer to the theoretical post-end element. It takes no parameters. Format:
 
 mapName.end();
+
+
+13. std::map::equal_range();
+
+This function returns the bounds of a range that includes all the elements in the container which have a key equivalent to "key", a parameter in the
+paramlist. Since the elements in a map all have unique keys, the range returned will contain a single element at most. If no matches are found, the
+range returned has a length of zero, with both iterators pointing to the first element that has a key considered to go after "key" according to the
+container's internal comparison object or function (key_comp). Two keys are considered equivalent if the container's comparison object returns false
+reflexively (i.e., no matter the order in which the keys are passed as arguments). This function takes one parameter, key. Format:
+
+mapName.equal_range(key);
