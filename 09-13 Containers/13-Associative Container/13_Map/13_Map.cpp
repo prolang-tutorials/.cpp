@@ -14,6 +14,7 @@ int main()
     mapEmplace();
     mapEmplace_hint();
     mapEmpty();
+    mapEnd();
 
     return 0;
 }

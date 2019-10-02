@@ -235,3 +235,17 @@ void mapEmpty()
     }
     std::cout << std::endl;
 }
+
+void mapEnd()
+{
+    std::cout << "std::map::end()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+
+    std::cout << "mOne contents:" << std::endl;
+    for (std::map<char, int>::iterator mIt = mOne.begin(); mIt != mOne.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+    std::cout << std::endl;
+}

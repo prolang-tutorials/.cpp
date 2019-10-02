@@ -116,3 +116,10 @@ mapName.emplace_hint(location, key, value);
 This function returns a boolean (1 - True, or 0 - False) based on whether the map object is empty or not. Takes no parameters. Format:
 
 mapName.empty();
+
+
+12. std::map::end();
+
+This is the function that returns a pointer to the theoretical post-end element. It takes no parameters. Format:
+
+mapName.end();
