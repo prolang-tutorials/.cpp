@@ -407,3 +407,27 @@ void mapKey_comp()
 
     std::cout << std::endl;
 }
+
+void mapLower_bound()
+{
+    std::cout << "std::map::lower_bound()" << std::endl;
+
+    std::map<char,int> mOne;
+    std::map<char,int>::iterator mItLower, mItUpper;
+
+    mOne['a'] = 1;
+    mOne['b'] = 2;
+    mOne['c'] = 3;
+    mOne['d'] = 4;
+    mOne['e'] = 5;
+
+    mItLower = mOne.lower_bound('b');
+    mItUpper = mOne.upper_bound('c');
+
+    mOne.erase(mItLower, mItUpper);
+
+    for (std::map<char, int>::iterator mIt = mOne.begin(); mIt != mOne.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << '\n';
+    }
+}

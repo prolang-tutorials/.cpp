@@ -21,6 +21,7 @@ int main()
     mapGet_allocator();
     mapInsert();
     mapKey_comp();
+    mapLower_bound();
 
     return 0;
 }
