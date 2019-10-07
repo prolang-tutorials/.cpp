@@ -322,7 +322,7 @@ void mapFind()
 void mapGet_allocator()
 {
     std::cout << "std::map::get_allocator()" << std::endl;
-    
+
     std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 }, { 'd', 4 }, { 'e', 5 } };
     std::map<char, int>::allocator_type mAT = mOne.get_allocator();
     std::pair<const char,int>* p;
@@ -335,4 +335,50 @@ void mapGet_allocator()
     std::cout << "The allocated array has a size of " << psize << " bytes.\n";
 
     mOne.get_allocator().deallocate(p,5);
+
+    std::cout << std::endl;
+}
+
+void mapInsert()
+{
+    std::cout << "std::map::insert()" << std::endl;
+
+    std::map<char,int> mOne;
+
+    // first insert function version (single parameter):
+    mOne.insert(std::pair<char,int>('a', 1));
+    mOne.insert(std::pair<char,int>('z', 2));
+
+    std::pair<std::map<char, int>::iterator, bool> pOne;
+
+    pOne = mOne.insert(std::pair<char, int>('z', 5));
+    if (pOne.second == false)
+    {
+        std::cout << "Element 'z' already existed with a value of " << pOne.first->second << std::endl;
+    }
+
+    // second insert function version (with hint position):
+    std::map<char,int>::iterator mIt = mOne.begin();
+
+    mOne.insert (mIt, std::pair<char,int>('b', 3));  // max efficiency inserting
+    mOne.insert (mIt, std::pair<char,int>('c', 4));  // no max efficiency inserting
+
+    // third insert function version (range insertion):
+    std::map<char, int> mTwo;
+    mTwo.insert(mOne.begin(), mOne.find('c'));
+
+    // showing contents:
+    std::cout << "mOne contains:\n";
+    for (mIt = mOne.begin(); mIt != mOne.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+
+    std::cout << "mTwo contains:\n";
+    for (mIt = mTwo.begin(); mIt!= mTwo.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+
+    std::cout << std::endl;
 }

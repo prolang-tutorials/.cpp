@@ -19,6 +19,7 @@ int main()
     mapErase();
     mapFind();
     mapGet_allocator();
+    mapInsert();
 
     return 0;
 }

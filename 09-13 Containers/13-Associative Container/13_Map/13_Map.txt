@@ -164,3 +164,12 @@ mapName.get_allocator().construct(where, value);
 mapName.get_allocator().destroy(elementNumber);
 mapName.get_allocator().deallocate(pointVar, amount);
 mapName.get_allocator();
+
+
+17. std::map::insert();
+
+This function just inserts an element with Key and Value into the location requested. Can also be a list of elements. The element to be inserted must be in
+pair form (std::pair<varType, varType>) with the varTypes that correspond to both the map and the element. Formats:
+
+mapName.insert(std::pair<varType, varType>(key, value));
+mapName.insert(rangeOfPairs);
