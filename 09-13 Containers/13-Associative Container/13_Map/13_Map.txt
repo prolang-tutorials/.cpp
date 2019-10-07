@@ -188,3 +188,10 @@ This function returns the lower_bound of the key passed in the paramList. Lower_
 is not considered to go before "key". Takes only one parameter, key. Format:
 
 mapName.lower_bound(key);
+
+
+20. std::map::max_size();
+
+Like all other max_size functions, it returns an unsigned_int value of the amount of elements the map could theoretically store. Takes no parameters. Format:
+
+mapName.max_size();

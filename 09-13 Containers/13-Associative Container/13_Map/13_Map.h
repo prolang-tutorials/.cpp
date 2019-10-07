@@ -430,4 +430,17 @@ void mapLower_bound()
     {
         std::cout << mIt->first << " maps to " << mIt->second << '\n';
     }
+
+    std::cout << std::endl;
+}
+
+void mapMax_size()
+{
+    std::cout << "std::map::max_size()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 } , { 'c', 3 }, { 'd', 4 }, { 'e', 5 } };
+
+    std::cout << "mOne has a maximum size of " << mOne.max_size() << " elements." << std::endl;
+
+    std::cout << std::endl;
 }

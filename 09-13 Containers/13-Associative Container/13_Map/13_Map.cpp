@@ -22,6 +22,7 @@ int main()
     mapInsert();
     mapKey_comp();
     mapLower_bound();
+    mapMax_size();
 
     return 0;
 }
