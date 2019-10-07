@@ -143,3 +143,11 @@ Formats:
 
 mapName.erase(key/element);
 mapName.erase(firstElement, lastElement);
+
+
+15. std::map::find();
+
+This function returns an iterator pointing at the found element in a map object. The element is found based on its key that is passed in via parameter list.
+Takes one parameter, the key. Format:
+
+mapName.find(key);

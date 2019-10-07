@@ -295,3 +295,26 @@ void mapErase()
     }
     std::cout << std::endl;
 }
+
+void mapFind()
+{
+    std::cout << "std::map::find()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 }, { 'd', 4 }, { 'e', 5 } };
+    std::map<char, int>::iterator mIt;
+    int i;
+
+    mIt = mOne.find('c');
+
+    if (mIt != mOne.end())
+    {
+        mOne.erase(mIt);
+    }
+
+    std::cout << "mOne contains: " << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+}

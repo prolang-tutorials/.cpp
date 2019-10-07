@@ -17,6 +17,7 @@ int main()
     mapEnd();
     mapEqual_range();
     mapErase();
+    mapFind();
 
     return 0;
 }
