@@ -318,3 +318,21 @@ void mapFind()
     }
     std::cout << std::endl;
 }
+
+void mapGet_allocator()
+{
+    std::cout << "std::map::get_allocator()" << std::endl;
+    
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 }, { 'd', 4 }, { 'e', 5 } };
+    std::map<char, int>::allocator_type mAT = mOne.get_allocator();
+    std::pair<const char,int>* p;
+    int psize;  
+
+    p = mOne.get_allocator().allocate(5);
+
+    psize = sizeof(std::map<char,int>::value_type)*5;
+
+    std::cout << "The allocated array has a size of " << psize << " bytes.\n";
+
+    mOne.get_allocator().deallocate(p,5);
+}

@@ -18,6 +18,7 @@ int main()
     mapEqual_range();
     mapErase();
     mapFind();
+    mapGet_allocator();
 
     return 0;
 }

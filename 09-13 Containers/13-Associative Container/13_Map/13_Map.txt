@@ -151,3 +151,16 @@ This function returns an iterator pointing at the found element in a map object.
 Takes one parameter, the key. Format:
 
 mapName.find(key);
+
+
+16. std::map::get_allocator();
+
+This version of get_allocator() has 5 different functions in itself. The first 4, we know, and the last one is familiar. It is used very differently in
+the <map> header. It is typically used to associate an allocator_type with a variable for cross-checking the specific types of varTypes in the map itself.
+Formats:
+
+mapName.get_allocator().allocate(amountToAllocate);
+mapName.get_allocator().construct(where, value);
+mapName.get_allocator().destroy(elementNumber);
+mapName.get_allocator().deallocate(pointVar, amount);
+mapName.get_allocator();
