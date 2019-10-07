@@ -444,3 +444,42 @@ void mapMax_size()
 
     std::cout << std::endl;
 }
+
+void mapOperatorEqualsSign()
+{
+    std::cout << "std::map::operator=" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 } };
+    std::map<char, int> mTwo;
+
+    std::cout << "mOne before =" << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+
+    std::cout << "mTwo before =" << std::endl;
+    for (auto& x : mTwo)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+
+    mTwo = mOne;
+    
+    std::cout << "mOne after =" << std::endl;
+    for (auto& x : mOne)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+    std::cout << std::endl;
+
+    std::cout << "mTwo after =" << std::endl;
+    for (auto& x : mTwo)
+    {
+        std::cout << x.first << " maps to " << x.second << std::endl;
+    }
+
+    std::cout << std::endl;
+}

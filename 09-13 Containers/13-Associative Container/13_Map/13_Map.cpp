@@ -23,6 +23,7 @@ int main()
     mapKey_comp();
     mapLower_bound();
     mapMax_size();
+    mapOperatorEqualsSign();
 
     return 0;
 }

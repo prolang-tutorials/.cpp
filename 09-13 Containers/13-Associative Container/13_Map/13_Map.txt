@@ -195,3 +195,10 @@ mapName.lower_bound(key);
 Like all other max_size functions, it returns an unsigned_int value of the amount of elements the map could theoretically store. Takes no parameters. Format:
 
 mapName.max_size();
+
+
+21. std::map::operator=;
+
+This is just the normal assignment operator. Assigns elements to a map by copying them. Is incapable of taking parameters. Format:
+
+mapName = mapName2;
