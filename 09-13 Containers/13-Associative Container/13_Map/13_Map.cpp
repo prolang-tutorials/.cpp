@@ -20,6 +20,7 @@ int main()
     mapFind();
     mapGet_allocator();
     mapInsert();
+    mapKey_comp();
 
     return 0;
 }

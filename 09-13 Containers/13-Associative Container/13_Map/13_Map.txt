@@ -173,3 +173,10 @@ pair form (std::pair<varType, varType>) with the varTypes that correspond to bot
 
 mapName.insert(std::pair<varType, varType>(key, value));
 mapName.insert(rangeOfPairs);
+
+
+18. std::map::key_comp();
+
+This function returns a copy of the key_comparison object that is used by the map object. Takes no paramters. Format:
+
+mapName.key_comp();

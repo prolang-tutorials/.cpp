@@ -382,3 +382,28 @@ void mapInsert()
 
     std::cout << std::endl;
 }
+
+void mapKey_comp()
+{
+    std::cout << "std::map::key_comp()" << std::endl;
+
+    std::map<char, int> mOne;
+    std::map<char, int>::key_compare mComp = mOne.key_comp();
+
+    mOne['a'] = 1;
+    mOne['b'] = 2;
+    mOne['c'] = 3;
+
+    std::cout << "mOne contains:" << std::endl;
+
+    char highest = mOne.rbegin()->first;     // key value of last element
+
+    std::map<char, int>::iterator mIt = mOne.begin();
+
+    do
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    } while (mComp((*mIt++).first, highest));
+
+    std::cout << std::endl;
+}
