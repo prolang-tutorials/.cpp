@@ -23,7 +23,7 @@ at contruction. I just prefer to use the first way. Here's the five ways I manag
 4. std::map<type1, type2, comparisonFunction> mapName;
 5. std::map<type1, type2, comparisonFunctionPointer> mapName;
 
-All together, there are 28 member functions.
+All together, there are 27 member functions.
 
 1. std::map::at();
 
