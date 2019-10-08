@@ -220,3 +220,10 @@ mapName[key];
 This is the reverse version of the begin function, returning an iterator that points to the last element in the map. Takes no parameters. Format:
 
 mapName.rbegin();
+
+
+24. std::map::rend();
+
+This is the reverse version of the end function, returning an iterator that points to the theoretical before-first element in the map. Takes no parameters. Format:
+
+mapName.rend();

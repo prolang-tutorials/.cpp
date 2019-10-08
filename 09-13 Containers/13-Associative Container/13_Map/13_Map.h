@@ -508,3 +508,17 @@ void mapRbegin()
     }
     std::cout << std::endl;
 }
+
+void mapRend()
+{
+    std::cout << "std::map::rend()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 }, { 'b', 2 }, { 'c', 3 } };
+
+    std::cout << "mOne backwards contains:" << std::endl;
+    for (std::map<char, int>::reverse_iterator mIt = mOne.rbegin(); mIt != mOne.rend(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+    std::cout << std::endl;
+}

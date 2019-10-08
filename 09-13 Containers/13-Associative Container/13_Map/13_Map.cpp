@@ -26,6 +26,7 @@ int main()
     mapOperatorEqualsSign();
     mapOperatorSquareBrackets();
     mapRbegin();
+    mapRend();
 
     return 0;
 }
