@@ -467,7 +467,7 @@ void mapOperatorEqualsSign()
     std::cout << std::endl;
 
     mTwo = mOne;
-    
+
     std::cout << "mOne after =" << std::endl;
     for (auto& x : mOne)
     {
@@ -480,6 +480,17 @@ void mapOperatorEqualsSign()
     {
         std::cout << x.first << " maps to " << x.second << std::endl;
     }
+
+    std::cout << std::endl;
+}
+
+void mapOperatorSquareBrackets()
+{
+    std::cout << "std::map::operator[]" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 } };
+
+    std::cout << "mOne key 'a' maps to " << mOne['a'] << std::endl;
 
     std::cout << std::endl;
 }

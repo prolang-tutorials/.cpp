@@ -24,6 +24,7 @@ int main()
     mapLower_bound();
     mapMax_size();
     mapOperatorEqualsSign();
+    mapOperatorSquareBrackets();
 
     return 0;
 }

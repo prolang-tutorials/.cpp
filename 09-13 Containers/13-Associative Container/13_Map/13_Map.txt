@@ -202,3 +202,14 @@ mapName.max_size();
 This is just the normal assignment operator. Assigns elements to a map by copying them. Is incapable of taking parameters. Format:
 
 mapName = mapName2;
+
+
+22. std::map::operator[];
+
+This is the access element function that works like in every other header file. If you input a key whose value exists, it will return the value of that element, 
+otherwise, the map will create a new element with given key, but no mapped value. This function takes one parameter, the key. By the way, here is a fun way of screwing
+around with code, if you want to use this function without using [], but also taking much longer to write it out: 
+(*((this->insert(make_pair(k,mapped_type()))).first)).second
+Format:
+
+mapName[key];
