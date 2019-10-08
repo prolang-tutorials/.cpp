@@ -522,3 +522,14 @@ void mapRend()
     }
     std::cout << std::endl;
 }
+
+void mapSize()
+{
+    std::cout << "std::map::size()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 } };
+
+    std::cout << "mOne has a size of " << mOne.size() << " elements." << std::endl;
+
+    std::cout << std::endl;
+}

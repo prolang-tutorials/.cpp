@@ -227,3 +227,10 @@ mapName.rbegin();
 This is the reverse version of the end function, returning an iterator that points to the theoretical before-first element in the map. Takes no parameters. Format:
 
 mapName.rend();
+
+
+25. std::map::size();
+
+This function returns the current size value in a unsigned_int form. Takes no parameters. Format:
+
+mapName.size();
