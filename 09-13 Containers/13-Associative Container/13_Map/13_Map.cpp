@@ -28,6 +28,7 @@ int main()
     mapRbegin();
     mapRend();
     mapSize();
+    mapSwap();
 
     return 0;
 }

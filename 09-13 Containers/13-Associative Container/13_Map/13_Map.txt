@@ -234,3 +234,10 @@ mapName.rend();
 This function returns the current size value in a unsigned_int form. Takes no parameters. Format:
 
 mapName.size();
+
+
+26. std::map::swap();
+
+This function exchanges the contents of 2 maps between each other, as long as they are compatible with each other. Takes one parameter. Format:
+
+mapName1.swap(mapName2);

@@ -533,3 +533,40 @@ void mapSize()
 
     std::cout << std::endl;
 }
+
+void mapSwap()
+{
+    std::cout << "std::map::swap()" << std::endl;
+
+    std::map<char, int> mOne = { { 'a', 1 } };
+    std::map<char, int> mTwo = { { 'a', 10 } };
+    std::map<char, int>::iterator mIt;
+
+    std::cout << "mOne contains:\n";
+    for (mIt = mOne.begin(); mIt != mOne.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+
+    std::cout << "mTwo contains:\n";
+    for (mIt = mTwo.begin(); mIt!= mTwo.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+
+    mOne.swap(mTwo);
+
+    std::cout << "mOne now contains:\n";
+    for (mIt = mOne.begin(); mIt != mOne.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+
+    std::cout << "mTwo now contains:\n";
+    for (mIt = mTwo.begin(); mIt!= mTwo.end(); ++mIt)
+    {
+        std::cout << mIt->first << " maps to " << mIt->second << std::endl;
+    }
+
+    std::cout << std::endl;
+}
