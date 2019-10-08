@@ -241,3 +241,11 @@ mapName.size();
 This function exchanges the contents of 2 maps between each other, as long as they are compatible with each other. Takes one parameter. Format:
 
 mapName1.swap(mapName2);
+
+
+27. std::map::upper_bound();
+
+This function returns a pointer to the first element in the map that is considered to go after "key". It is like lower_bound, but the other way. Takes one parameter, key.
+Format:
+
+mapName.upper_bound(key);

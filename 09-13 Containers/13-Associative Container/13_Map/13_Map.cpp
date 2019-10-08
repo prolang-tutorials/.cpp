@@ -29,6 +29,7 @@ int main()
     mapRend();
     mapSize();
     mapSwap();
+    mapUpper_bound();
 
     return 0;
 }
