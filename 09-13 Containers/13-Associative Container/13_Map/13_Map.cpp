@@ -25,6 +25,7 @@ int main()
     mapMax_size();
     mapOperatorEqualsSign();
     mapOperatorSquareBrackets();
+    mapRbegin();
 
     return 0;
 }

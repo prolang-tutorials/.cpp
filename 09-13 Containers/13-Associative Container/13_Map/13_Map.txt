@@ -213,3 +213,10 @@ around with code, if you want to use this function without using [], but also ta
 Format:
 
 mapName[key];
+
+
+23. std::map::rbegin();
+
+This is the reverse version of the begin function, returning an iterator that points to the last element in the map. Takes no parameters. Format:
+
+mapName.rbegin();
